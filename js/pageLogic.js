@@ -6,8 +6,7 @@ const main = document.querySelector('main')
 function registerNavigation() {
     document.querySelectorAll("a").forEach(link => {
         if (link.hasAttribute('load-main')) {
-            link.removeEventListener("click", handleNavClick)
-            link.addEventListener("click", handleNavClick)
+            link.addEventListener("click", handleNavClick, { once: true })
         }
     })
 }
@@ -48,4 +47,5 @@ function loadMain(content) {
         })
 
     registerNavigation()
+    document.querySelector('title').textContent = `HTL - ${content}`
 }

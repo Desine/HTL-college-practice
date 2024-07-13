@@ -1,5 +1,6 @@
 @import url("home.css");
 @import url("catalog.css");
+@import url("about-company.css");
 
 
 :root{
@@ -44,6 +45,8 @@ p{
 a{
     text-decoration: none;
     color: var(--color-black);
+
+    cursor: pointer;
 }
 
 ul{
@@ -69,6 +72,9 @@ img {
 }
 .color-light-gray{
     color: var(--color-light-gray);
+}
+.color-white{
+    color: white;
 }
 /* /color */
 
@@ -198,7 +204,7 @@ footer{
     }
 }
 
-.spread-two-horizontal{
+.space-between{
     display: flex;
     justify-content: space-between;
 }
@@ -206,9 +212,6 @@ footer{
 .carousel{
     display: flex;
 }
-
-
-
 
 /* /features */
 

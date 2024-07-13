@@ -14,22 +14,41 @@
     <div class="path">
         <a load-main='home'>Главная -</a>
         <a load-main='catalog'>Каталог -</a>
-        <a load-main='catalog'>HTL BUSINESS</a>
+        <span>HTL BUSINESS</span>
     </div>
 
-    <div class="spread-two-horizontal">
-        <h2>HTL BUSINESS</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt</p>
+    <div class="space-between">
+        <h2>О компании</h2>
+        <p></p>
     </div>
 
     <div class="catalog">
         <div class="catalog-filters">
-            <a href="#" catalog-section-toggle="catalog">Каталог</a>
+            <a catalog-toggle="catalog">Каталог</a>
             <div catalog-section="catalog">
+                <a catalog-toggle="business">BUSINESS</a>
+                <ul catalog-section="business">
+                    <li><span>Всё</span><span>1</span></li>
+                    <li><span>Офисные</span><span>2</span></li>
+                    <li><span>Линейные</span><span>3</span></li>
+                    <li><span>Магистральные</span><span>4</span></li>
+                    <li><span>Даунлайты</span><span>5</span></li>
+                    <li><span>Школьные</span><span>6</span></li>
+                    <li><span>Медицинские</span><span>7</span></li>
+                    <li><span>ЖКХ и тех.помещения</span><span>8</span></li>
+                </ul>
 
+                <a catalog-toggle="production">PRODUCTION</a>
+                <ul catalog-section="production">
+                </ul>
+
+                <a catalog-toggle="retail">RETAIL</a>
+                <ul catalog-section="retail">
+                    <li><span>Всё</span><span>1</span></li>
+                </ul>
             </div>
 
-            <a href="#" catalog-section-toggle="filters">Фильтры</a>
+            <a catalog-toggle="filters">Фильтры</a>
             <div catalog-section="filters">
 
             </div>
@@ -84,14 +103,14 @@
         </div>
 
         <div class="catalog-download">
-            <a href="">Скачать Каталог</a>
+            <a href="#">Скачать Каталог</a>
         </div>
         <div class="catalog-switch">
             <img src="" alt="arrow right">
             <ul>
-                <li><a href="">1</a></li>
-                <li><a href="">2</a></li>
-                <li><a href="">3</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
             </ul>
             <img src="" alt="arrow left">
         </div>
