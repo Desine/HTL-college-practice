@@ -1,0 +1,28 @@
+
+.catalog{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto auto;
+
+
+    .catalog-filters{
+        grid-row: span 2;
+    }
+    .catalog-items{
+        grid-column: 2/5;
+        
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        
+    }
+    .catalog-switch{
+        grid-column: span 3;
+
+        display: flex;
+        justify-content: space-between;
+
+        ul{
+            display: flex;
+        }
+    }
+}
