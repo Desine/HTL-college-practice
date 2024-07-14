@@ -21,21 +21,21 @@
 .about-contact-form-wrapper{
     background-color: var(--color-black);
 }
-.about-contact-form-holder{
+.about-contact-form{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     
     :first-child > * {
         color: white;
         max-width: 90%;
     }
-}
+    
+    :first-child{
+        grid-row: span 4;
+        grid-column: span 2;
+    }
 
-.about-contact-form{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-
-    :nth-child(n+5){
+    :nth-child(n+6){
         grid-column: span 2;
     }
     a{

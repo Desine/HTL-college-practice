@@ -49,3 +49,18 @@ function loadMain(content) {
     registerNavigation()
     document.querySelector('title').textContent = `HTL - ${content}`
 }
+
+
+
+
+
+
+
+
+ymaps.ready(init);
+function init() {
+    var myMap = new ymaps.Map("map", {
+        center: [55.75097278964379, 37.61758211769605],
+        zoom: 16
+    });
+}

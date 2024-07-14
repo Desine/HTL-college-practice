@@ -1,0 +1,11 @@
+
+.purchase{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+    a{
+        background-color: var(--color-light-gray);
+        padding: 2rem;
+    }
+}

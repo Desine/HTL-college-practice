@@ -2,6 +2,9 @@
 @import url("catalog.css");
 @import url("about-company.css");
 @import url("portfolio.css");
+@import url("contacts.css");
+@import url("news.css");
+@import url("purchase.css");
 
 
 :root{
@@ -213,7 +216,11 @@ footer{
 .carousel{
     display: flex;
 }
-
+.headline{
+    * { 
+        max-width: 500px;
+    }
+}
 /* /features */
 
 

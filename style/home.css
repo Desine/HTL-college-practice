@@ -67,7 +67,7 @@
     }
 }
 
-.news{
+.home-news{
     display: grid;
     grid-template-columns: 4fr 2fr;
     gap: 2rem;

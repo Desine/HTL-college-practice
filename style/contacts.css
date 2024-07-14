@@ -1,0 +1,25 @@
+
+.contacts{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.contacts-contact-form{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    
+    
+    :first-child{
+        max-width: 90%;
+        grid-row: span 5;
+    }
+    :nth-child(3){
+        grid-row: span 3;
+    }
+    :nth-child(n+6){
+        grid-column: span 2;
+    }
+    a{
+        color: green;
+    }
+}
