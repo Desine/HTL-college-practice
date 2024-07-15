@@ -26,7 +26,7 @@ const initialContent = location.hash.replace("#", "") || "home"
 loadMain(initialContent);
 
 function loadMain(name) {
-    const path = `../page/Content/${name}.html`
+    const path = `../page/MainContent/${name}.html`
     console.log(`ME. Try loading main from: ${path}`)
     fetch(path)
         .then(response => {
