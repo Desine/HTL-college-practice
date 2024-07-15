@@ -1,11 +1,11 @@
-.about-company-video-preview{
+.video-preview{
     
     img{
         width: 100%;
     }
 }
 
-.we-offer{
+.offer{
     display: grid;
     grid-template-columns: 1fr 1fr;
 
@@ -18,10 +18,10 @@
     display: flex;
 }
 
-.about-contact-form-wrapper{
+.contact-form-wrapper{
     background-color: var(--color-black);
 }
-.about-contact-form{
+.contact-form{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     

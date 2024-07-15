@@ -4,18 +4,22 @@
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
 
+    li{
+        display: flex;
+        justify-content: space-between;
+    }
 
-    .catalog-filters{
+    .filters{
         grid-row: span 2;
     }
-    .catalog-items{
+    .items{
         grid-column: 2/5;
         
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         
     }
-    .catalog-switch{
+    .switch{
         grid-column: span 3;
 
         display: flex;
@@ -25,11 +29,5 @@
             display: flex;
         }
     }
-}
-
-
-li{
-    display: flex;
-    justify-content: space-between;
 }
 

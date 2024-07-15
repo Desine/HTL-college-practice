@@ -25,8 +25,8 @@ function handlePopState(event) {
 const initialContent = location.hash.replace("#", "") || "home"
 loadMain(initialContent);
 
-function loadMain(content) {
-    const path = `../page/Content/${content}.html`
+function loadMain(name) {
+    const path = `../page/Content/${name}.html`
     console.log(`ME. Try loading main from: ${path}`)
     fetch(path)
         .then(response => {
@@ -40,6 +40,7 @@ function loadMain(content) {
             const mainContentMatch = data.match(/<body[^>]*>([\s\S]*?)<\/body>/)
             if (mainContentMatch && mainContentMatch[1]) {
                 main.innerHTML = mainContentMatch[1];
+                insertStyle(main, name)
             } else {
                 main.innerHTML = 'ME. page found, but no content found'
                 throw new Error('ME. main not found')
@@ -47,9 +48,15 @@ function loadMain(content) {
         })
 
     registerNavigation()
-    document.querySelector('title').textContent = `HTL - ${content}`
+    document.querySelector('title').textContent = `HTL - ${name}`
 }
 
+function insertStyle(parent, css) {
+    const link = document.createElement('link')
+    link.rel = "stylesheet"
+    link.href = `../../style/${css}.css`
+    parent.appendChild(link)
+}
 
 
 

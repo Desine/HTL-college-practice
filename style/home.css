@@ -29,7 +29,7 @@
     }
 }
 
-.about-company{
+.about{
     display: flex;
     flex-direction: column;
     align-items: center;

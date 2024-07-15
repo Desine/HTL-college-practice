@@ -1,11 +1,3 @@
-@import url("home.css");
-@import url("catalog.css");
-@import url("about-company.css");
-@import url("portfolio.css");
-@import url("contacts.css");
-@import url("news.css");
-@import url("purchase.css");
-
 
 :root{
     --color-black: #1C1C1C;
