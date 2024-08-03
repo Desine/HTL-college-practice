@@ -1,0 +1,19 @@
+.purchase {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+}
+.purchase a {
+  background-color: #F9F9F9;
+  padding: 10%;
+}
+@media (max-width: 800px) {
+  .purchase {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .purchase {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=purchase.css.map */

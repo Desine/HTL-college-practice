@@ -1,0 +1,15 @@
+@import "variables";
+
+.news {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+
+    @media (max-width: $screen-size-m) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $screen-size-s) {
+        grid-template-columns: 1fr;
+    }
+}

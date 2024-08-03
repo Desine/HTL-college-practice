@@ -1,0 +1,129 @@
+.hero {
+  position: relative;
+  background-color: #F9F9F9;
+}
+.hero * {
+  max-width: 600px;
+}
+.hero .hero-count {
+  position: relative;
+  height: 100px;
+  width: 100px;
+}
+.hero .hero-count #hero-count {
+  font-size: 42px;
+  color: #03A543;
+}
+.hero .hero-count :nth-child(2) {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.hero .hero-arrows {
+  position: absolute;
+  right: 4rem;
+  bottom: 4rem;
+}
+
+.outstand {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2%;
+}
+.outstand > * {
+  background-color: #F9F9F9;
+}
+.outstand p:nth-of-type(1) {
+  font-size: 100px;
+}
+@media (max-width: 400px) {
+  .outstand {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.about h1 {
+  max-width: 1300px;
+}
+.about p {
+  max-width: 500px;
+}
+.about a {
+  text-wrap: nowrap;
+}
+
+.product-categories > * {
+  background-color: #F9F9F9;
+}
+.product-categories .product-category {
+  max-width: 300px;
+  text-wrap: nowrap;
+}
+.product-categories .product-category .category-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.product-categories .product-category .category-label h3 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  padding: 1.5rem;
+}
+.product-categories .product-category .category-label a {
+  transform: rotate(90deg);
+  padding: 1.5rem;
+}
+.product-categories .product-category[opened] .category-label {
+  height: auto;
+  flex-direction: row;
+  background-color: #03A543;
+}
+.product-categories .product-category[opened] .category-label h3 {
+  writing-mode: unset;
+  transform: rotate(0deg);
+}
+.product-categories .product-category[opened] .category-label a {
+  transform: rotate(0deg);
+}
+.product-categories .sub-category ul {
+  display: flex;
+  gap: 0.3rem;
+  flex-wrap: wrap;
+  max-width: 70%;
+}
+.product-categories .sub-category img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.home-news {
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  gap: 2rem;
+}
+.home-news p {
+  max-width: 500px;
+}
+.home-news :nth-child(1) {
+  grid-row: span 3;
+}
+.home-news :nth-child(n+2) p {
+  max-width: 400px;
+}
+.home-news :nth-child(n+2) h3 {
+  max-width: 400px;
+}
+@media (max-width: 800px) {
+  .home-news {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=home.css.map */

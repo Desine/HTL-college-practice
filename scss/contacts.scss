@@ -1,0 +1,49 @@
+@import 'variables.scss';
+
+
+.contacts {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+
+
+    @media (max-width: $screen-size-m) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: $screen-size-s) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+
+    :first-child {
+        max-width: 90%;
+        grid-row: span 5;
+    }
+
+    :nth-child(3) {
+        grid-row: span 3;
+    }
+
+    :nth-child(n+6) {
+        grid-column: span 2;
+    }
+
+    a {
+        color: green;
+    }
+
+    input[type=text],
+    input[type=button] {
+        background-color: $color-light-gray;
+    }
+
+    input {
+        border-color: transparent;
+    }
+}

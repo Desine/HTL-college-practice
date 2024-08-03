@@ -1,33 +1,33 @@
-
-.catalog{
+.catalog {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto auto auto;
 
-    li{
+    li {
         display: flex;
         justify-content: space-between;
     }
 
-    .filters{
+    .filters {
         grid-row: span 2;
     }
-    .items{
+
+    .items {
         grid-column: 2/5;
-        
+
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        
+
     }
-    .switch{
+
+    .switch {
         grid-column: span 3;
 
         display: flex;
         justify-content: space-between;
 
-        ul{
+        ul {
             display: flex;
         }
     }
 }
-

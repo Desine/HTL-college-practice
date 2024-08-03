@@ -1,44 +1,46 @@
-.video-preview{
-    
-    img{
+.video-preview {
+
+    img {
         width: 100%;
     }
 }
 
-.offer{
+.offer {
     display: grid;
     grid-template-columns: 1fr 1fr;
 
-    :first-child{
+    :first-child {
         grid-row: span 3;
     }
 }
 
-.suggestion{
+.suggestion {
     display: flex;
 }
 
-.contact-form-wrapper{
-    background-color: var(--color-black);
+.contact-form-wrapper {
+    background-color: $color-black;
 }
-.contact-form{
+
+.contact-form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    
-    :first-child > * {
+
+    :first-child>* {
         color: white;
         max-width: 90%;
     }
-    
-    :first-child{
+
+    :first-child {
         grid-row: span 4;
         grid-column: span 2;
     }
 
-    :nth-child(n+6){
+    :nth-child(n+6) {
         grid-column: span 2;
     }
-    a{
+
+    a {
         color: green;
     }
 }

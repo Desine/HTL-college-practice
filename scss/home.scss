@@ -1,0 +1,172 @@
+@import 'variables.scss';
+
+
+.hero {
+    position: relative;
+    background-color: $color-light-gray;
+
+    * {
+        max-width: 600px;
+    }
+
+    .hero-count {
+        position: relative;
+        height: 100px;
+        width: 100px;
+
+        #hero-count {
+            font-size: 42px;
+            color: #03A543;
+        }
+
+        :nth-child(2) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    .hero-arrows {
+        position: absolute;
+        right: 4rem;
+        bottom: 4rem;
+    }
+}
+
+
+
+
+
+
+.outstand {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2%;
+
+    >* {
+        background-color: $color-light-gray; // если переменная определена в CSS, иначе используйте $color-light-gray
+    }
+
+    p:nth-of-type(1) {
+        font-size: 100px;
+    }
+
+    @media (max-width: $screen-size-s) {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+
+    h1 {
+        max-width: 1300px;
+    }
+
+    p {
+        max-width: 500px;
+    }
+
+    a {
+        text-wrap: nowrap;
+    }
+}
+
+
+.product-categories {
+    >* {
+        background-color: $color-light-gray;
+    }
+
+
+    .product-category {
+        max-width: 300px;
+        text-wrap: nowrap;
+
+        .category-label {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+
+            h3 {
+                writing-mode: vertical-rl;
+                transform: rotate(180deg);
+                padding: 1.5rem;
+            }
+
+            a {
+                transform: rotate(90deg);
+                padding: 1.5rem;
+            }
+        }
+    }
+
+    .product-category[opened] {
+        .category-label {
+            height: auto;
+            flex-direction: row;
+            background-color: $color-green;
+
+            h3 {
+                writing-mode: unset;
+                transform: rotate(0deg);
+            }
+
+            a {
+                transform: rotate(0deg);
+            }
+        }
+    }
+
+
+
+    .sub-category {
+
+        ul {
+            display: flex;
+            gap: 0.3rem;
+            flex-wrap: wrap;
+            max-width: 70%;
+        }
+
+        img {
+            height: 150px;
+            object-fit: cover;
+        }
+    }
+}
+
+.home-news {
+    display: grid;
+    grid-template-columns: 4fr 2fr;
+    gap: 2rem;
+
+    p {
+        max-width: 500px;
+    }
+
+    :nth-child(1) {
+        grid-row: span 3;
+    }
+
+    :nth-child(n+2) {
+        p {
+            max-width: 400px;
+        }
+
+        h3 {
+            max-width: 400px;
+        }
+    }
+
+    @media (max-width: $screen-size-m) {
+        grid-template-columns: 1fr;
+    }
+}

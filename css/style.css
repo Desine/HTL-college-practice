@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1C1C1C;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #1C1C1C;
+}
+
+h3 {
+  font-size: 1rem;
+  color: #1C1C1C;
+}
+
+p {
+  font-size: 0.8rem;
+  color: #1C1C1C;
+}
+
+a {
+  text-decoration: none;
+  color: #1C1C1C;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+  font-style: italic;
+  background-repeat: no-repeat;
+  background-size: cover;
+  shape-margin: 1rem;
+}
+
+/* Color */
+.color-black {
+  color: #1C1C1C;
+}
+
+.color-gray {
+  color: #aaa;
+}
+
+.color-light-gray {
+  color: #F9F9F9;
+}
+
+.color-white {
+  color: white;
+}
+
+/* /color */
+/* Text */
+.bold {
+  font-weight: bold;
+}
+
+/* /text */
+/* Content-grid */
+.content-grid {
+  display: grid;
+  grid-template-columns: [full-width-start] minmax(2rem, 1fr) [breakout-start] minmax(0, 900px) [content-start] min(100% - 2rem * 2, 1600px) [content-end] minmax(0, 900px) [breakout-end] minmax(2rem, 1fr) [full-width-end];
+}
+
+.content-grid > * {
+  grid-column: content;
+}
+
+.content-grid > .breakout {
+  grid-column: breakout;
+}
+
+.content-grid > .full-width {
+  grid-column: full-width;
+}
+
+/* /content-grid */
+/* Header */
+.header > * {
+  padding-top: 10px;
+}
+.header ul {
+  padding: 0;
+}
+.header .header-top {
+  display: flex;
+  align-items: center;
+}
+.header .header-top > * {
+  padding: 0 10px 0 10px;
+}
+.header .header-top :nth-child(3) {
+  margin: 0 auto;
+  padding: 0;
+}
+.header .header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-wrap: nowrap;
+}
+.header .header-bottom a {
+  height: 100%;
+}
+.header .header-bottom ul {
+  display: flex;
+}
+.header .header-bottom ul > * {
+  padding: 10px;
+}
+.header .contact {
+  display: flex;
+}
+.header .contact * {
+  padding: 10px;
+}
+.header .contact .free-measurement {
+  display: none;
+  background-color: #03A543;
+}
+.header .contact:hover .free-measurement {
+  display: block;
+}
+@media (max-width: 800px) {
+  .header {
+    display: none;
+  }
+}
+
+.header-collapsed {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.header-collapsed > :first-child {
+  background-color: #03A543;
+}
+@media (min-width: 800px) {
+  .header-collapsed {
+    display: none;
+  }
+}
+
+.header-burger {
+  display: none;
+}
+.header-burger > :nth-child(1) {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+}
+.header-burger > :nth-child(2) {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+}
+
+.header-burger-bottom {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.header-burger-bottom * {
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-burger-bottom ul {
+  margin-bottom: 20px;
+}
+
+/* /header */
+/* Footer */
+footer {
+  justify-self: end;
+  background-color: #1C1C1C;
+}
+footer * {
+  color: white;
+}
+
+.footer-upper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto auto;
+}
+.footer-upper > :nth-child(2) {
+  grid-row: span 2;
+}
+.footer-upper > :nth-child(5),
+.footer-upper > :nth-child(6) {
+  align-self: flex-end;
+}
+.footer-upper > :nth-child(5) {
+  grid-column: 3;
+}
+.footer-upper > :nth-child(6) {
+  grid-column: 4;
+}
+@media (max-width: 800px) {
+  .footer-upper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-upper > :first-child {
+    grid-column: span 3;
+    display: flex;
+  }
+  .footer-upper > :first-child div {
+    display: flex;
+    margin-left: auto;
+  }
+  .footer-upper > :nth-child(5) {
+    grid-column: 2;
+  }
+  .footer-upper > :nth-child(6) {
+    grid-column: 3;
+  }
+}
+@media (max-width: 400px) {
+  .footer-upper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .footer-upper > :first-child {
+    grid-column: span 2;
+    display: flex;
+  }
+  .footer-upper > :first-child div {
+    display: flex;
+    margin-left: auto;
+  }
+  .footer-upper > :nth-child(5) {
+    grid-column: span 2;
+  }
+  .footer-upper > :nth-child(6) {
+    grid-column: span 2;
+  }
+}
+
+/* /footer */
+/* Features */
+.path :not(:last-child) {
+  color: #aaa;
+}
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel {
+  display: flex;
+  gap: 1rem;
+  overflow: scroll;
+}
+
+.headline {
+  padding: 4rem 0 2rem 0;
+}
+.headline * {
+  max-width: 500px;
+}
+
+/* /features *//*# sourceMappingURL=style.css.map */

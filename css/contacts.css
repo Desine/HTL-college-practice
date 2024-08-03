@@ -1,0 +1,40 @@
+.contacts {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(6, 1fr);
+}
+@media (max-width: 800px) {
+  .contacts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .contacts {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact-form :first-child {
+  max-width: 90%;
+  grid-row: span 5;
+}
+.contact-form :nth-child(3) {
+  grid-row: span 3;
+}
+.contact-form :nth-child(n+6) {
+  grid-column: span 2;
+}
+.contact-form a {
+  color: green;
+}
+.contact-form input[type=text],
+.contact-form input[type=button] {
+  background-color: #F9F9F9;
+}
+.contact-form input {
+  border-color: transparent;
+}/*# sourceMappingURL=contacts.css.map */

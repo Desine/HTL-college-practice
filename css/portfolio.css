@@ -1,0 +1,15 @@
+.projects {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 800px) {
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 400px) {
+  .projects {
+    grid-template-columns: 1fr;
+  }
+}/*# sourceMappingURL=portfolio.css.map */

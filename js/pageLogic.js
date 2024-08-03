@@ -4,11 +4,15 @@
 const main = document.querySelector('main')
 
 function registerNavigation() {
-    document.querySelectorAll("a").forEach(link => {
-        if (link.hasAttribute('load-main')) {
-            link.addEventListener("click", handleNavClick, { once: true })
-        }
-    })
+    setTimeout(() => {
+        document.querySelectorAll("a").forEach(link => {
+            //link.style = 'background-color: blue'
+            if (link.hasAttribute('load-main')) {
+                link.addEventListener("click", handleNavClick, { once: true })
+                //link.style = 'background-color: green'
+            }
+        })
+    }, 500)
 }
 function handleNavClick(event) {
     event.preventDefault()
@@ -26,7 +30,7 @@ const initialContent = location.hash.replace("#", "") || "home"
 loadMain(initialContent);
 
 function loadMain(name) {
-    const path = `../page/MainContent/${name}.html`
+    const path = `../html/${name}.html`
     console.log(`ME. Try loading main from: ${path}`)
     fetch(path)
         .then(response => {
@@ -46,6 +50,7 @@ function loadMain(name) {
                 throw new Error('ME. main not found')
             }
         })
+        .catch(console.error);
 
     registerNavigation()
     document.querySelector('title').textContent = `HTL - ${name}`
@@ -54,7 +59,7 @@ function loadMain(name) {
 function insertStyle(parent, css) {
     const link = document.createElement('link')
     link.rel = "stylesheet"
-    link.href = `../../style/${css}.css`
+    link.href = `../../css/${css}.css`
     parent.appendChild(link)
 }
 
