@@ -22,8 +22,9 @@
   max-width: 90%;
   grid-row: span 5;
 }
-.contact-form :nth-child(3) {
-  grid-row: span 3;
+.contact-form :nth-child(5) {
+  grid-row: 1/4;
+  grid-column: 3;
 }
 .contact-form :nth-child(n+6) {
   grid-column: span 2;
@@ -37,4 +38,35 @@
 }
 .contact-form input {
   border-color: transparent;
+}
+@media (max-width: 800px) {
+  .contact-form {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contact-form :first-child {
+    max-width: 200px;
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  .contact-form :nth-child(5) {
+    grid-row: 2/5;
+    grid-column: 2;
+  }
+}
+@media (max-width: 400px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form :first-child {
+    max-width: 200px;
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .contact-form :nth-child(5) {
+    grid-row: auto;
+    grid-column: auto;
+  }
+  .contact-form :nth-child(n+6) {
+    grid-column: auto;
+  }
 }/*# sourceMappingURL=contacts.css.map */

@@ -1,4 +1,4 @@
-@import 'variables.scss';
+@import 'variables';
 
 
 
@@ -91,8 +91,8 @@ img {
 /* Content-grid */
 .content-grid {
     $padding-inline: 2rem;
-    $content-max-width: 1600px;
-    $breakout-max-width: 1700px;
+    $content-max-width: 1200px;
+    $breakout-max-width: 1400px;
 
     $breakout-calculated-width: $breakout-max-width - $content-max-width / 2;
 
@@ -166,6 +166,7 @@ img {
 
     .contact {
         display: flex;
+        transition-duration: 1s;
 
         * {
             padding: 10px;
@@ -326,8 +327,22 @@ footer {
 /* Features */
 
 .path {
+    margin-top: 1.5rem;
+
     :not(:last-child) {
         color: $color-gray;
+    }
+}
+
+.headline {
+    * {
+        max-width: 500px;
+    }
+
+    padding: 4rem 0 2rem 0;
+
+    @media (max-width: $screen-size-s) {
+        flex-direction: column;
     }
 }
 
@@ -342,12 +357,36 @@ footer {
     overflow: scroll;
 }
 
-.headline {
-    * {
-        max-width: 500px;
-    }
-
-    padding: 4rem 0 2rem 0;
-}
 
 /* /features */
+
+/* Common */
+.link-arrow {
+    height: 30px;
+    width: 30px;
+    background-image: url("../img/common/arrow.svg");
+
+
+    &[left] {
+        transform: rotate(180deg);
+    }
+
+    &[down] {
+        transform: rotate(180deg);
+    }
+
+    &[up] {
+        transform: rotate(180deg);
+    }
+
+    &[inverse] {
+        background-image: url("../img/common/arrow-inverse.svg");
+    }
+
+    &[hollow] {
+        background-image: url("../img/common/arrow-hollow.svg");
+    }
+}
+
+
+/* /common */

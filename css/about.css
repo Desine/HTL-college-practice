@@ -1,0 +1,68 @@
+.video-preview img {
+  width: 100%;
+}
+
+.offer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.offer :first-child {
+  grid-row: span 3;
+}
+@media (max-width: 800px) {
+  .offer {
+    grid-template-columns: 1fr;
+  }
+}
+
+.suggestion {
+  display: flex;
+}
+
+.contact-form-wrapper {
+  background-color: #1C1C1C;
+}
+
+.contact-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-wrap: wrap;
+}
+.contact-form :first-child > * {
+  color: white;
+  max-width: 90%;
+}
+.contact-form :first-child {
+  grid-row: span 4;
+  grid-column: span 2;
+}
+.contact-form :nth-child(n+6) {
+  grid-column: span 2;
+}
+.contact-form a {
+  color: green;
+}
+@media (max-width: 800px) {
+  .contact-form {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contact-form :first-child {
+    grid-row: span 1;
+    grid-column: span 2;
+  }
+  .contact-form :nth-child(n+6) {
+    grid-column: span 2;
+  }
+}
+@media (max-width: 400px) {
+  .contact-form {
+    grid-template-columns: 1fr;
+  }
+  .contact-form :first-child {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  .contact-form :nth-child(n+6) {
+    grid-column: span 1;
+  }
+}/*# sourceMappingURL=about.css.map */

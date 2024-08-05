@@ -1,3 +1,5 @@
+@import 'variables';
+
 .video-preview {
 
     img {
@@ -12,6 +14,10 @@
     :first-child {
         grid-row: span 3;
     }
+
+    @media (max-width: $screen-size-m) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .suggestion {
@@ -25,6 +31,8 @@
 .contact-form {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    text-wrap: wrap;
+
 
     :first-child>* {
         color: white;
@@ -42,5 +50,33 @@
 
     a {
         color: green;
+    }
+
+
+
+    @media (max-width: $screen-size-m) {
+        grid-template-columns: repeat(2, 1fr);
+
+        :first-child {
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        :nth-child(n+6) {
+            grid-column: span 2;
+        }
+    }
+
+    @media (max-width: $screen-size-s) {
+        grid-template-columns: 1fr;
+
+        :first-child {
+            grid-row: span 1;
+            grid-column: span 1;
+        }
+
+        :nth-child(n+6) {
+            grid-column: span 1;
+        }
     }
 }
