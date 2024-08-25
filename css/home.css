@@ -1,12 +1,20 @@
 .hero {
   position: relative;
   background-color: #F9F9F9;
+  min-height: 500px;
 }
 .hero * {
   max-width: 600px;
 }
+.hero .discription {
+  margin-left: 40%;
+  height: 200px;
+  align-self: center;
+}
 .hero .hero-count {
-  position: relative;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
   height: 100px;
   width: 100px;
 }
@@ -14,7 +22,7 @@
   font-size: 42px;
   color: #03A543;
 }
-.hero .hero-count :nth-child(2) {
+.hero .hero-count #hero-amount {
   position: absolute;
   right: 0;
   bottom: 0;
@@ -50,7 +58,7 @@
   text-align: center;
 }
 .about h1 {
-  max-width: 1300px;
+  max-width: 1000px;
 }
 .about p {
   max-width: 500px;
@@ -95,13 +103,19 @@
 .product-categories .product-category[opened] .category-label a {
   transform: rotate(0deg);
 }
-.product-categories .sub-category ul {
+.product-categories .product-category[opened] .category-content {
+  display: block;
+}
+.product-categories .category-content {
+  display: none;
+}
+.product-categories .category-content ul {
   display: flex;
   gap: 0.3rem;
   flex-wrap: wrap;
   max-width: 70%;
 }
-.product-categories .sub-category img {
+.product-categories .category-content img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -126,6 +140,9 @@
   }
 }
 
+.portfolio {
+  margin-top: 1rem;
+}
 .portfolio .portfolio-item {
   display: flex;
   min-width: 500px;
@@ -150,10 +167,10 @@
   margin-top: auto;
 }
 @media (max-width: 400px) {
-  .portfolio .portfolio-item {
+  .portfolio {
     min-width: 250px;
   }
-  .portfolio .portfolio-item .portfolio-text-block {
+  .portfolio .portfolio-text-block {
     margin: 9rem 1rem 1rem 1rem;
   }
 }

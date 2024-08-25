@@ -1,6 +1,6 @@
 .contacts {
   display: grid;
-  gap: 10px;
+  gap: 1rem;
   grid-template-columns: repeat(6, 1fr);
 }
 @media (max-width: 800px) {
@@ -16,6 +16,7 @@
 
 .contact-form {
   display: grid;
+  gap: 1rem;
   grid-template-columns: repeat(3, 1fr);
 }
 .contact-form :first-child {
@@ -65,6 +66,7 @@
   .contact-form :nth-child(5) {
     grid-row: auto;
     grid-column: auto;
+    min-height: 100px;
   }
   .contact-form :nth-child(n+6) {
     grid-column: auto;

@@ -4,6 +4,7 @@
 
 .offer {
   display: grid;
+  gap: 3rem;
   grid-template-columns: 1fr 1fr;
 }
 .offer :first-child {
@@ -21,10 +22,13 @@
 
 .contact-form-wrapper {
   background-color: #1C1C1C;
+  margin-top: 2rem;
 }
 
 .contact-form {
   display: grid;
+  gap: 1rem;
+  padding-top: 1rem;
   grid-template-columns: repeat(4, 1fr);
   text-wrap: wrap;
 }

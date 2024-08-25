@@ -10,6 +10,9 @@
 .catalog .filters {
   grid-row: span 2;
 }
+.catalog .filters a {
+  display: block;
+}
 .catalog .items {
   grid-column: 2/5;
   display: grid;
@@ -22,4 +25,32 @@
 }
 .catalog .switch ul {
   display: flex;
+}
+@media (max-width: 800px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
+  .catalog .filters,
+  .catalog .sort,
+  .catalog .show,
+  .catalog .download,
+  .catalog .display {
+    display: none;
+  }
+  .catalog .items {
+    grid-column: 1;
+    grid-template-columns: 1fr 1fr;
+  }
+  .catalog .switch {
+    grid-column: 1;
+  }
+}
+@media (max-width: 400px) {
+  .catalog .items {
+    grid-template-columns: 1fr;
+  }
+}
+
+[catalog-section] {
+  padding-left: 1rem;
 }/*# sourceMappingURL=catalog.css.map */

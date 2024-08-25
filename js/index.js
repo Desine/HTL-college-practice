@@ -45,6 +45,7 @@ function loadMain(name) {
             if (mainContentMatch && mainContentMatch[1]) {
                 main.innerHTML = mainContentMatch[1];
                 insertStyle(main, name)
+                insertScript(main, name)
             } else {
                 main.innerHTML = 'ME. page found, but no content found'
                 throw new Error('ME. main not found')
@@ -61,6 +62,11 @@ function insertStyle(parent, css) {
     link.rel = "stylesheet"
     link.href = `../../css/${css}.css`
     parent.appendChild(link)
+}
+function insertScript(parent, js) {
+    const script = document.createElement('script')
+    script.src = `../../js/${js}.js`
+    parent.appendChild(script)
 }
 
 
